@@ -28,3 +28,4 @@ jobs:
     - run: |
           touch .env
           echo "${{ secrets.PROD_ENV_FILE }}"> .env
+    - run: pm2 restart BackendAPI #so what ever the changes we made in our code it is going to restart it aagain 
