@@ -28,6 +28,12 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+app.use("/api/products123",(req,res)=>{
+  return res.status(200).json({
+    message: 'This is new feature change, a new route for products123'
+  })
+})
+
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
